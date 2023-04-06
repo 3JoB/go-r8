@@ -1,0 +1,3 @@
+[submodule "static"]
+	path = static
+	url = https://github.com/3JoB/r8-src.git
