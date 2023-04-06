@@ -1,0 +1,37 @@
+config: 
+  default: help
+
+sub-init: |
+  git submodule update --init --recursive
+
+sub-update: |
+  git submodule update
+
+sub-remote: |
+  git submodule update --remote
+
+get-build-binary: |
+  @if {{.runtime.os}} == windows then var-windows else var-other
+
+var-windows: |
+  @var binary r8.exe
+
+var-other: |
+  @var other r8
+
+build: |
+  @echo ?
+  @run build-core
+  @run build-src
+
+build-core : |
+  @run get-build-binary
+  go build -ldflags "-s -w" -o bin/{{.binary}}
+
+help: |
+  @echo ------------HELP-----------------
+  @echo   gmake2 sub-init
+  @echo   gmake2 build
+  @echo   gmake2 build-src
+  @echo   gmake2 build-core
+  @echo ---------------------------------
