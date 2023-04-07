@@ -1,6 +1,17 @@
 {
     "cSpell.words": [
+        "Datetime",
+        "dbname",
+        "dialector",
+        "Dont",
         "gmake",
-        "ldflags"
+        "knadh",
+        "koanf",
+        "ldflags",
+        "maxidle",
+        "maxlife",
+        "maxopen",
+        "pgsql",
+        "sslmode"
     ]
 }
