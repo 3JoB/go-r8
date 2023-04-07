@@ -4,7 +4,9 @@
         "dbname",
         "dialector",
         "Dont",
+        "glebarez",
         "gmake",
+        "gorm",
         "knadh",
         "koanf",
         "ldflags",
@@ -12,6 +14,7 @@
         "maxlife",
         "maxopen",
         "pgsql",
-        "sslmode"
+        "sslmode",
+        "ulib"
     ]
 }
