@@ -4,6 +4,7 @@ go 1.20
 
 require (
 	github.com/3JoB/ulib v1.26.0
+	github.com/3JoB/unsafeConvert v1.3.0
 	github.com/glebarez/sqlite v1.7.0
 	github.com/knadh/koanf/parsers/yaml v0.1.0
 	github.com/knadh/koanf/providers/file v0.1.0
@@ -12,11 +13,11 @@ require (
 	github.com/savsgio/atreugo/v11 v11.9.12
 	gorm.io/driver/mysql v1.4.7
 	gorm.io/driver/postgres v1.5.0
+	gorm.io/gen v0.3.21
 	gorm.io/gorm v1.24.7-0.20230306060331-85eaf9eeda11
 )
 
 require (
-	github.com/3JoB/unsafeConvert v1.3.0 // indirect
 	github.com/andybalholm/brotli v1.0.5 // indirect
 	github.com/cespare/xxhash/v2 v2.2.0 // indirect
 	github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f // indirect
@@ -51,7 +52,6 @@ require (
 	golang.org/x/tools v0.8.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	gorm.io/datatypes v1.1.1 // indirect
-	gorm.io/gen v0.3.21 // indirect
 	gorm.io/hints v1.1.1 // indirect
 	gorm.io/plugin/dbresolver v1.4.1 // indirect
 	modernc.org/libc v1.22.2 // indirect
