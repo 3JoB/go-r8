@@ -16,6 +16,7 @@
         "maxlife",
         "maxopen",
         "pgsql",
+        "savsgio",
         "solidjs",
         "sslmode",
         "ulib",
