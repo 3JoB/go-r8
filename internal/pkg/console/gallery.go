@@ -15,3 +15,5 @@ package console
 // GalleryRemove
 
 // GalleryChange
+
+// GalleryReport

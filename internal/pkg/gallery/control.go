@@ -13,3 +13,5 @@ package gallery
 // GalleryRemove
 
 // GalleryChange
+
+// GalleryReport
