@@ -3,9 +3,8 @@ package db
 import (
 	"context"
 
-	"github.com/redis/go-redis/v9"
-
 	errs "github.com/3JoB/ulib/err"
+	"github.com/redis/go-redis/v9"
 )
 
 var (

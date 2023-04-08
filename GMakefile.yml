@@ -1,6 +1,9 @@
 config: 
   default: help
 
+fmt: |
+  gorgeous ./...
+
 sub-init: |
   git submodule update --init --recursive
 

@@ -1,8 +1,9 @@
 package main
 
 import (
-	"github.com/3JoB/go-r8/internal/db"
 	"gorm.io/gen"
+
+	"github.com/3JoB/go-r8/internal/db"
 )
 
 type Querier interface {
@@ -10,10 +11,10 @@ type Querier interface {
 	FilterWithNameAndRole(name, role string) ([]gen.T, error)
 }
 
-func main(){
+func main() {
 	gg := gen.NewGenerator(gen.Config{
 		OutPath: "../query",
-		Mode: gen.WithoutContext|gen.WithDefaultQuery|gen.WithQueryInterface, // generate mode
+		Mode:    gen.WithoutContext | gen.WithDefaultQuery | gen.WithQueryInterface, // generate mode
 	})
 
 	gg.UseDB(db.NewDB())

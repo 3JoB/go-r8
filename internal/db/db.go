@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"time"
 
+	errs "github.com/3JoB/ulib/err"
 	"github.com/glebarez/sqlite"
 	"gorm.io/driver/mysql"
 	"gorm.io/driver/postgres"
@@ -12,7 +13,6 @@ import (
 	"gorm.io/gorm/schema"
 
 	"github.com/3JoB/go-r8/internal/config"
-	errs "github.com/3JoB/ulib/err"
 )
 
 var (
@@ -23,12 +23,12 @@ var (
 func init() {
 	var (
 		dialector gorm.Dialector
-		conf    gorm.Config
+		conf      gorm.Config
 	)
 	client := kc.String("database.client")
 	switch client {
 	case "mysql":
-		dsn := fmt.Sprintf("%v:%v@tcp(%v)/%v?charset=utf8mb4&parseTime=True&loc=Local", kc.String("database.mysql.user"), kc.String("database.mysql.pass") , kc.String("database.mysql.addr") , kc.String("database.mysql.db"))
+		dsn := fmt.Sprintf("%v:%v@tcp(%v)/%v?charset=utf8mb4&parseTime=True&loc=Local", kc.String("database.mysql.user"), kc.String("database.mysql.pass"), kc.String("database.mysql.addr"), kc.String("database.mysql.db"))
 		dialector = mysql.New(mysql.Config{
 			DSN:                       dsn,
 			DefaultStringSize:         256,
@@ -46,7 +46,7 @@ func init() {
 	case "sqlite", "sqlite3":
 		dialector = sqlite.Open(config.SqlitePath())
 	case "pgsql":
-		dsn := fmt.Sprintf("host=%v user=%v password=%v dbname=%v port=%v sslmode=disable TimeZone=%v",kc.String("database.pgsql.addr"), kc.String("database.pgsql.user"), kc.String("database.pgsql.pass"), kc.String("database.pgsql.db"), kc.String("database.pgsql.port"), kc.String("database.pgsql.zone"))
+		dsn := fmt.Sprintf("host=%v user=%v password=%v dbname=%v port=%v sslmode=disable TimeZone=%v", kc.String("database.pgsql.addr"), kc.String("database.pgsql.user"), kc.String("database.pgsql.pass"), kc.String("database.pgsql.db"), kc.String("database.pgsql.port"), kc.String("database.pgsql.zone"))
 		dialector = postgres.New(postgres.Config{
 			DSN:                  dsn,
 			PreferSimpleProtocol: true,

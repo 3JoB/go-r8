@@ -4,11 +4,10 @@ import (
 	"fmt"
 	"runtime"
 
+	r "github.com/3JoB/ulib/runtime"
 	"github.com/knadh/koanf/parsers/yaml"
 	"github.com/knadh/koanf/providers/file"
 	"github.com/knadh/koanf/v2"
-
-	r "github.com/3JoB/ulib/runtime"
 )
 
 // Global koanf instance. Use "." as the key path delimiter. This can be "/" or any character.
