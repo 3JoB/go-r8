@@ -5,5 +5,6 @@ import (
 )
 
 func main(){
+	panic("TODO")
 	atreugo.New(atreugo.Config{})
 }
