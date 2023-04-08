@@ -1,5 +1,6 @@
 {
     "cSpell.words": [
+        "beercss",
         "Datetime",
         "dbname",
         "dialector",
@@ -14,7 +15,9 @@
         "maxlife",
         "maxopen",
         "pgsql",
+        "solidjs",
         "sslmode",
-        "ulib"
+        "ulib",
+        "undici"
     ]
 }
